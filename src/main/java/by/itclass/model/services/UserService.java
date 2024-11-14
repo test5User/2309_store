@@ -3,6 +3,8 @@ package by.itclass.model.services;
 import by.itclass.model.dao.UserDao;
 import by.itclass.model.entities.User;
 
+import java.util.Map;
+
 public class UserService {
     private static UserService service;
     private final UserDao dao;
@@ -22,8 +24,8 @@ public class UserService {
         return dao.selectUser(login, password);
     }
 
-    public boolean addUser(User user) {
-        return dao.insertUser(user);
+    public boolean addUser(Map<String, String[]> params) {
+        return dao.insertUser(params);
     }
 
     public boolean changePassword(int id, String password) {

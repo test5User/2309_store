@@ -33,4 +33,8 @@ public abstract class AbstractController extends HttpServlet {
         req.setAttribute(MESSAGE_ATTR, message);
         req.getRequestDispatcher(url).forward(req, resp);
     }
+
+    protected void redirect(HttpServletResponse resp, String url) throws IOException {
+        resp.sendRedirect(url);
+    }
 }
