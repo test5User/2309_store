@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <jsp:include page="<%=MENU_JSP%>"/>
+    <img class="default-image" src="<%=BACKGROUND_IMAGE%>">
     <div class="form-box">
         <h2>Change Password</h2>
         <form method="post" action="<%=CHANGE_CONTROLLER%>">

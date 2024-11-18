@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h2>User info</h2>
-    <p>Id: ${user.id}</p>
-    <p>Name: ${user.name}</p>
-    <p>Email: ${user.email}</p>
-    <p>Login: ${user.login}</p>
-    <p>Password: ${user.password}</p>
+    <jsp:include page="<%=MENU_JSP%>"/>
+    <c:if test="${not empty tvs}">
+        <c:forEach var="tv" items="${tvs}">
+            <div class="item-box">
+                <img class="small-img" src="/img/tv/${tv.vendor}-${tv.model}.jpg">
+                <p>Vendor ${tv.vendor}</p>
+                <p>Model ${tv.model}</p>
+                <p>Price ${tv.price} byn.</p>
+            </div>
+        </c:forEach>
+    </c:if>
 </body>
 </html>
