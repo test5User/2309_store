@@ -10,12 +10,12 @@ import java.io.IOException;
 
 import static by.itclass.constants.AppConst.*;
 
-@WebServlet(TV_CONTROLLER)
-public class TvController extends AbstractController {
+@WebServlet(LAPTOP_CONTROLLER)
+public class LaptopController extends AbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        var tvs = tvService.getTvs(req.getParameterMap());
-        req.setAttribute(TVS_ATTR, tvs);
-        forward(req, resp, TV_PAGE_JSP);
+        var laptops = laptopService.getLaptops(req.getParameterMap());
+        req.setAttribute(LAPTOPS_ATTR, laptops);
+        forward(req, resp, LAPTOP_PAGE_JSP);
     }
 }
