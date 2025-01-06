@@ -22,6 +22,8 @@
                 <a href="<%=LAPTOP_CONTROLLER%>">Laptop</a></li>
             <li class="nav-li">
                 <a href="<%=CART_JSP%>">Cart</a></li>
+            <li class="nav-li">
+                <a href="<%=ORDER_HISTORY_CONTROLLER%>">Orders</a></li>
         </c:otherwise>
     </c:choose>
 </ul>

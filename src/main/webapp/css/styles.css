@@ -263,3 +263,28 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+.order-container {
+    width: 600px;
+    text-align: center;
+}
+
+.order-container input {
+    width: 600px;
+    padding: 5px 0;
+    margin: 15px 0;
+}
+
+.order-container input[type=submit] {
+    width: 150px;
+    background-color: forestgreen;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.order-list-container {
+    background-color: lightgray;
+}
+

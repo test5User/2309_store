@@ -54,6 +54,15 @@
                     </form>
                 </div>
             </c:forEach>
+            <div class="order-container">
+                <form method="post" action="<%=ORDER_CONTROLLER%>">
+                    <input name="<%=ADDRESS_PARAM%>" placeholder="Delivery address" required>
+                    <input type="submit" value="Submit order">
+                </form>
+                <c:if test="${not empty message}">
+                    <h2 class="error">${message}</h2>
+                </c:if>
+            </div>
         </c:when>
         <c:otherwise>
             <p>Your cart is empty</p>
