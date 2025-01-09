@@ -34,6 +34,7 @@ public class AppConst {
     public static final String ORDER_ITEMS_ATTR = "orderItems";
     public static final String ORDER_ID_ATTR = "orderId";
     public static final String ORDERS_ATTR = "orders";
+    public static final String RECEIPT_ATTR = "receipt";
 
     public static final String LOGIN_CONTROLLER = "/login";
     public static final String LOGOUT_CONTROLLER = "/logout";
@@ -44,6 +45,7 @@ public class AppConst {
     public static final String CART_CONTROLLER = "/cart";
     public static final String ORDER_CONTROLLER = "/order";
     public static final String ORDER_HISTORY_CONTROLLER = "/orderHistory";
+    public static final String PRINT_ORDER_CONTROLLER = "/printOrder";
 
     public static final String LOGIN_JSP = "/jsp/login.jsp";
     public static final String REG_JSP = "/jsp/reg.jsp";
@@ -57,6 +59,7 @@ public class AppConst {
     public static final String LAPTOP_FILTER = "/jsp/filters/laptop-filter.html";
     public static final String CART_JSP = "/jsp/cart.jsp";
     public static final String ORDERS_JSP = "/jsp/orders.jsp";
+    public static final String RECEIPT_JSP = "/jsp/receipt.jsp";
 
     public static final String BACKGROUND_IMAGE = "/img/background-img.jpg";
 }

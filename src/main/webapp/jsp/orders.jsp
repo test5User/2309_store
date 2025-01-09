@@ -14,7 +14,11 @@
           <h2>Yours orders:</h2>
           <c:forEach var="order" items="${orders}">
               <div class="order-list-container">
-                  <h3>${order.date}, number: ${order.id}, address: ${order.address}
+                  <h3>${order.date}, number: ${order.id}, address: ${order.address}</h3>
+                  <form method="post" action="<%=PRINT_ORDER_CONTROLLER%>">
+                      <input type="hidden" name="orderId" value="${order.id}">
+                      <input type="submit" value="Print">
+                  </form>
               </div>
           </c:forEach>
       </c:when>

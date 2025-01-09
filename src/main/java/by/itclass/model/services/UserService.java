@@ -5,19 +5,11 @@ import by.itclass.model.entities.User;
 
 import java.util.Map;
 
-public class UserService {
-    private static UserService service;
+public class UserService implements Service {
     private final UserDao dao;
 
-    private UserService() {
-        dao = UserDao.getInstance();
-    }
-
-    public static UserService getInstance(){
-        if (service == null) {
-            service = new UserService();
-        }
-        return service;
+    public UserService() {
+        dao = new UserDao();
     }
 
     public User getUser(String login, String password) {

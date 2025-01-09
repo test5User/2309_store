@@ -15,19 +15,6 @@ public class UserDao {
     private static final String CHECK_USER = "SELECT id FROM user WHERE login = ?";
     private static final String CHANGE_PASS = "UPDATE user SET password = ? WHERE id = ?";
 
-    private static UserDao dao;
-
-    private UserDao() {
-        ConnectionManager.init();
-    }
-
-    public static UserDao getInstance() {
-        if (dao == null) {
-            dao = new UserDao();
-        }
-        return dao;
-    }
-
     public User selectUser(String login, String password) {
         try (var cn = ConnectionManager.getConnection();
             var ps = cn.prepareStatement(SELECT_USER)) {

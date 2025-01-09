@@ -10,19 +10,11 @@ import java.util.Map;
 
 import static by.itclass.constants.AppConst.*;
 
-public class TvService {
-    private static TvService service;
+public class TvService implements Service {
     private TvDao dao;
 
-    private TvService() {
-        dao = TvDao.getInstance();
-    }
-
-    public static TvService getInstance() {
-        if (service == null) {
-            service = new TvService();
-        }
-        return service;
+    public TvService() {
+        dao = new TvDao();
     }
 
     public List<Tv> getTvs(Map<String, String[]> params) {

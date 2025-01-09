@@ -1,6 +1,7 @@
 package by.itclass.controllers.user;
 
-import by.itclass.controllers.AbstractController;
+import by.itclass.controllers.abstraction.AbstractController;
+import by.itclass.controllers.abstraction.UserAbstractController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ import java.io.IOException;
 import static by.itclass.constants.AppConst.*;
 
 @WebServlet(LOGIN_CONTROLLER)
-public class LoginController extends AbstractController {
+public class LoginController extends UserAbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var login = req.getParameter(LOGIN_PARAM);

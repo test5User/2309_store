@@ -2,20 +2,16 @@ package by.itclass.model.services;
 
 import by.itclass.model.dao.OrderDao;
 import by.itclass.model.entities.Order;
+import by.itclass.model.entities.Receipt;
 import jakarta.servlet.http.HttpSession;
 
 import java.util.List;
 
-public class OrderService {
-    private static OrderService service;
+public class OrderService implements Service {
     private OrderDao dao;
 
-    private OrderService() {
-        dao = OrderDao.getInstance();
-    }
-
-    public static OrderService getInstance() {
-        return service == null ? service = new OrderService() : service;
+    public OrderService() {
+        dao = new OrderDao();
     }
 
     public boolean saveOrder(HttpSession session, String address) {
@@ -24,5 +20,9 @@ public class OrderService {
 
     public List<Order> getOrders(int userId) {
         return dao.selectOrders(userId);
+    }
+
+    public Receipt buildReceipt(String orderId) {
+        return dao.buildReceipt(orderId);
     }
 }

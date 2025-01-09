@@ -288,3 +288,25 @@ body {
     background-color: lightgray;
 }
 
+.order-list-container input[type=submit] {
+    width: 200px;
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 25px;
+    margin: 0 0 20px 20px;
+    cursor: pointer;
+}
+
+.receipt-container {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 20px;
+    display: inline-block;
+}
+
+.underline {
+    text-decoration: underline;
+}

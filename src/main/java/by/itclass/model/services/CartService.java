@@ -8,14 +8,7 @@ import java.util.List;
 
 import static by.itclass.constants.AppConst.*;
 
-public class CartService {
-    private static CartService service;
-
-    private CartService() {}
-
-    public static CartService getInstance() {
-        return service == null ? new CartService() : service;
-    }
+public class CartService implements Service {
 
     public List<OrderItem> processCart(HttpSession session, String cartAction, OrderItem item) {
         var orderItems = session.getAttribute(ORDER_ITEMS_ATTR);
